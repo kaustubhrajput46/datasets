@@ -1,0 +1,25 @@
+# The functions can be deployed with below command on local system
+# sudo faas-cli login -u admin -p <pwd> | sudo faas-cli deploy -f <raw link of yml file>
+# To deploy on a remote system, make sure to login to openfaas UI and then execute below command
+# export OPENFAAS_URL=<remote instance IP>
+# sudo faas-cli login -u admin -p <pwd> | sudo faas-cli deploy -f <raw link of stack.yml file> --gateway <remote instance IP>:8080
+
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080  # can be a remote server
+
+# functions go here, but can be created in the UI too.
+functions:
+   fast-fourier-transform:
+     lang: dockerfile
+     image: kaustubhrajput/fast-fourier-transform:latest
+     environment:
+         read_timeout: 1500s
+         write_timeout: 1500s
+         exec_timeout: 1500s
+     labels:
+         com.openfaas.scale.min: 0
+         com.openfaas.scale.max: 20
+         com.openfaas.scale.factor: 10
+         com.openfaas.scale.zero: true
+
