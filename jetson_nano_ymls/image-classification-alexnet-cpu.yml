@@ -10,7 +10,7 @@ provider:
 
 # functions go here, but can be created in the UI too.
 functions:
-   fast-fourier-transform:
+   image-classification-alexnet-cpu:
      lang: dockerfile
      image: kaustubhrajput/image-classification-alexnet-cpu:latest
      environment:
