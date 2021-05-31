@@ -10,9 +10,9 @@ provider:
 
 # functions go here, but can be created in the UI too.
 functions:
-   fast-fourier-transform:
+   object-classification-yolo-no-gpu:
      lang: dockerfile
-     image: cd21/fast-fourier-transform:latest
+     image: cd21/object-classification-yolo-no-gpu:latest
      environment:
          read_timeout: 1500s
          write_timeout: 1500s

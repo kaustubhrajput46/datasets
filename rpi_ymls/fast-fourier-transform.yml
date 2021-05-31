@@ -12,7 +12,7 @@ provider:
 functions:
    fast-fourier-transform:
      lang: dockerfile
-     image: cd21/fast-fourier-transform:latest
+     image: kaustubhrajput/fast-fourier-transform:latest
      environment:
          read_timeout: 1500s
          write_timeout: 1500s
