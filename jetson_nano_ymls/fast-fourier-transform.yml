@@ -7,12 +7,11 @@
 provider:
   name: openfaas
   gateway: http://127.0.0.1:8080  # can be a remote server
-
 # functions go here, but can be created in the UI too.
 functions:
    fast-fourier-transform:
      lang: dockerfile
-     image: cd21/fast-fourier-transform:latest
+     image: kaustubhrajput/fast-fourier-transform:latest
      environment:
          read_timeout: 1500s
          write_timeout: 1500s
