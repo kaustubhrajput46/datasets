@@ -10,7 +10,7 @@ provider:
 
 # functions go here, but can be created in the UI too.
 functions:
-  fast-fourier-transform:
+  dd-cmd:
     lang: dockerfile
     image: cd21/dd-cmd:latest
     environment:
